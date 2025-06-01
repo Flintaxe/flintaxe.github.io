@@ -1,0 +1,8 @@
+body {
+	background-color: hsl(180, 100%, 97%);
+	font-family: arial, DejaVu Sans, Arial Unicode MS, Lucida Sans Unicode, sans-serif;
+    display: flex;
+    align-items: center;
+	flex-direction: column;
+}
+
