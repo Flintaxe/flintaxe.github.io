@@ -1,8 +1,43 @@
 body {
-	background-color: hsl(180, 100%, 97%);
-	font-family: arial, DejaVu Sans, Arial Unicode MS, Lucida Sans Unicode, sans-serif;
+    margin: 0;
+    height: 100vh; /* Full viewport height */
     display: flex;
-    align-items: center;
-	flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    font-family: sans-serif;
 }
 
+h1 {
+    animation: weirdWobble 5s infinite;
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+}
+
+/* Animation keyframes */
+@keyframes weirdWobble {
+    0% {
+        transform: rotate(0deg) scale(1) skewX(0deg);
+        filter: hue-rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg) scale(1.1) skewX(10deg);
+        filter: hue-rotate(90deg);
+    }
+    50% {
+        transform: rotate(-5deg) scale(0.95) skewX(-10deg);
+        filter: hue-rotate(180deg);
+    }
+    75% {
+        transform: rotate(10deg) scale(1.05) skewX(5deg);
+        filter: hue-rotate(270deg);
+    }
+    100% {
+        transform: rotate(0deg) scale(1) skewX(0deg);
+        filter: hue-rotate(360deg);
+    }
+}
